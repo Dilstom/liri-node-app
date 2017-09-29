@@ -25,7 +25,7 @@ console.log(process.argv);
 processCommand(action)
 
 
-// will then create a switch-case statement (if-then would also work).
+// create a switch-case statement 
 // The switch-case will direct which function gets run.
 function processCommand(action) {
   switch (action) {
@@ -102,7 +102,7 @@ function movieThis() {
   request(queryUrl, function(error, response, body) {
   // If the request is successful
     if (!error && response.statusCode === 200) {
-      // (Note: The syntax below for parsing isn't obvious. Just spend a few moments dissecting it).
+      
       var bodyObject = JSON.parse(body);
       // console.log(bodyObject);
       console.log("Movie Title: " + bodyObject.Title);
@@ -119,21 +119,21 @@ function movieThis() {
 
 // // last function
   function doWhatSays() {
-  fs.readFile("random.txt", "utf8", function(err, data) {
-    if (err) {
-      return console.log(err);
-    } else {
-      // split data into 2 arguments
-      // argument 1 is command
-      // argument 2 is song
+      fs.readFile("random.txt", "utf8", function(err, data) {
+        if (err) {
+          return console.log(err);
+        } else {
+          // split data into 2 arguments
+          // argument 1 is command
+          // argument 2 is song
 
-      var args = data.split(',')
-      song = args[1]
-      action = args[0]
+          var args = data.split(',')
+          song = args[1]
+          action = args[0]
 
-      // pass these arguments to processCommand
-      processCommand(action)   
+          // pass these arguments to processCommand
+          processCommand(action)   
 
-        }
-});
+            }
+      });
   }

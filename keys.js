@@ -18,8 +18,3 @@ var spotifyApi = {
 module.exports.twitterKeys = twitterKeys;
 module.exports.spotifyKeys = spotifyApi;
  
-//Spotify:
-// Client ID
-// d896e695a9884bd3b3e092271396fe8b
-// Client Secret
-// 0f17051fefa24e3e9d1c617da6dfaff4
